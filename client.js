@@ -20,6 +20,7 @@ function submitInfo(event) {
         </tr>
 
     `;
+    
 }
 
 function removeRow(event) {
