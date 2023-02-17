@@ -15,7 +15,7 @@ function submitInfo(event) {
             <td>${lastName}</td>
             <td>${Number(id)}</td>
             <td>${title}</td>
-            <td>${Number(salary)}</td>
+            <td>${salary}</td>
             <td><button onClick="removeRow(event)">Delete</button></td>
         </tr>
 
@@ -25,3 +25,11 @@ function submitInfo(event) {
 function removeRow(event) {
     event.target.closest('tr').remove();
 }
+
+function totalMonthlySalary(event) {
+    let sum = 0;
+    let totalSalary = sum;
+    return totalSalary;
+}
+
+console.log(totalMonthlySalary);

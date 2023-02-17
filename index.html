@@ -16,11 +16,11 @@
             <input id="lastname-input" type="text" value="Last Name">
             <input id="id-input" type="text" value="ID">
             <input id="title-input" type="text" value="Title">
-            <input id="salary-input" type="text" value="Annual Salary">
-            <input type="submit" value="Submit">
+            <input id="salary-input" type="text" value="Annual Salary"><br >
+            <input id="submit" type="submit" value="Submit">
         </form>
         <h2>Employees</h2>
-        <table id="employeesTable">
+        <table id="employeesData">
             <thead>
                 <tr>
                     <th>First Name</th>
@@ -31,7 +31,7 @@
                     <th>Remove</th>
                 </tr>
             </thead>
-            <tbody id="employeesData">
+            <tbody>
                 <tr>
                     <td>Sam</td>
                     <td>Gossie</td>
@@ -42,6 +42,9 @@
                 </tr>
             </tbody>
         </table>
+        <div id="totalMonthlySalary">
+            <h2>Monthly Salary: <span id="monthly-salary"></span></h2>
+        </div>
     </div> 
     <script src="client.js"></script>
 </body>
