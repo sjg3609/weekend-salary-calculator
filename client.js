@@ -15,21 +15,23 @@ function submitInfo(event) {
     let salary = document.querySelector('#salary-input').value;
     let calculatorDiv = document.querySelector('#employeesData');
     let monthlySalaryDiv = document.querySelector('#totalMonthlySalary');
-    let totalMonthlyCost = salary % 12 ;
-    
+    let totalMonthlyCost = salary;
+    let avgMonthlySalary = totalMonthlyCost % 12;
+
     calculatorDiv.innerHTML += `
       <tr>
             <td>${firstName}</td>
             <td>${lastName}</td>
-            <td>${Number(id)}</td>
+            <td>${id}</td>
             <td>${title}</td>
-            <td>${salary}</td>
+            <td>${Number(salary)}</td>
             <td><button onClick="removeRow(event)">Delete</button></td>
         </tr>
 
     `;
-     if (totalMonthlyCost >= 20000) {
+     if (avgMonthlySalary >= 20000) {
         monthlySalaryDiv.style.backgroundColor = 'red';
+        document.querySelector('#monthly-salary').innerHTML = avgMonthlySalary;
 
      } else {
         monthlySalaryDiv.style.backgroundColor = '';
