@@ -1,10 +1,12 @@
 console.log('Hello!');
 
+let totalMonthlyCost = 0;
+
 function submitInfo(event) {
     console.log('submitting information');
     event.preventDefault();
 
-    // let totalMonthlyCost += ${salary} % 12; 
+    
 
     let firstName = document.querySelector('#firstname-input').value;
     let lastName = document.querySelector('#lastname-input').value;
@@ -13,6 +15,7 @@ function submitInfo(event) {
     let salary = document.querySelector('#salary-input').value;
     let calculatorDiv = document.querySelector('#employeesData');
     let monthlySalaryDiv = document.querySelector('#totalMonthlySalary');
+    let totalMonthlyCost = salary % 12 ;
     
     calculatorDiv.innerHTML += `
       <tr>
@@ -25,7 +28,7 @@ function submitInfo(event) {
         </tr>
 
     `;
-     if (Number(salary) >= 20000) {
+     if (totalMonthlyCost >= 20000) {
         monthlySalaryDiv.style.backgroundColor = 'red';
 
      } else {
