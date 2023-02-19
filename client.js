@@ -2,6 +2,8 @@ console.log('Hello!');
 
 let totalMonthlyCost = 0;
 
+
+
 function submitInfo(event) {
     console.log('submitting information');
     event.preventDefault();
@@ -15,8 +17,8 @@ function submitInfo(event) {
     let salary = document.querySelector('#salary-input').value;
     let calculatorDiv = document.querySelector('#employeesData');
     let monthlySalaryDiv = document.querySelector('#totalMonthlySalary');
-    let totalMonthlyCost = salary;
-    let avgMonthlySalary = totalMonthlyCost % 12;
+    let totalMonthlyCost = Number(salary);
+    let avgMonthlySalary = totalMonthlyCost / 12;
 
     calculatorDiv.innerHTML += `
       <tr>
@@ -24,14 +26,21 @@ function submitInfo(event) {
             <td>${lastName}</td>
             <td>${id}</td>
             <td>${title}</td>
-            <td>${Number(salary)}</td>
+            <td>${salary}</td>
             <td><button onClick="removeRow(event)">Delete</button></td>
         </tr>
 
     `;
+    
+    monthlySalaryDiv.innerHTML = `
+    
+    <span id="monthly-salary">${Number(avgMonthlySalary)}</span></h2>
+    
+    
+    `
+
      if (avgMonthlySalary >= 20000) {
         monthlySalaryDiv.style.backgroundColor = 'red';
-        document.querySelector('#monthly-salary').innerHTML = avgMonthlySalary;
 
      } else {
         monthlySalaryDiv.style.backgroundColor = '';
@@ -41,6 +50,5 @@ function submitInfo(event) {
 function removeRow(event) {
     event.target.closest('tr').remove();
 }
-
 
 
