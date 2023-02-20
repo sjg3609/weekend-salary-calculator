@@ -42,9 +42,7 @@ function submitInfo(event) {
      if (avgMonthlySalary >= 20000) {
         monthlySalaryDiv.style.backgroundColor = 'red';
 
-     } else {
-        monthlySalaryDiv.style.backgroundColor = '';
-     }
+     } 
 }
 
 function removeRow(event) {
