@@ -34,10 +34,10 @@ function submitInfo(event) {
     
     monthlySalaryDiv.innerHTML = `
     
-    <span id="monthly-salary">${Number(avgMonthlySalary)}</span></h2>
+    <h2>Total Monthly Salary: <span id="monthly-salary">${Number(avgMonthlySalary)}</span></h2>
     
     
-    `
+    `;
 
      if (avgMonthlySalary >= 20000) {
         monthlySalaryDiv.style.backgroundColor = 'red';
