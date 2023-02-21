@@ -41,6 +41,7 @@ function submitInfo(event) {
 
      if (totalMonthlyCost >= 20000) {
         monthlySalaryDiv.style.backgroundColor = 'red';
+        monthlySalaryDiv.style.color = 'white';
 
      } 
 }
