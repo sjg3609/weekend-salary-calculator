@@ -4,6 +4,8 @@ Weekend Salary Calculator
 
 ## Description
 
+Duration: 4 hours
+
 This project requires a user's information for their first names, last names, ID numbers, TItles and Annual Salaries into a calculator that would total the user totals and output the total monthly salary of all user inputted information in a table on the page. THere is also functionality to remove employees from the list that is displayed after they have submitted their information into the calculator. When the total monhtly salaries equates to more than $20,000, the page will turn red.
 
 ## PREREQUISITES
